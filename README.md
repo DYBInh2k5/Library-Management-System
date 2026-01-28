@@ -221,5 +221,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 [⭐ Star this repo](https://github.com/DYBInh2k5/Library-Management-System) • [🐛 Report Bug](https://github.com/DYBInh2k5/Library-Management-System/issues) • [💡 Request Feature](https://github.com/DYBInh2k5/Library-Management-System/issues)
 
-</div>#   L i b r a r y - M a n a g e m e n t - S y s t e m  
- 
+</div>#
