@@ -1,0 +1,51 @@
+# Sơ đồ ERD (Dạng text - có thể vẽ bằng công cụ như Draw.io)
+
+## Ký hiệu:
+- [Entity] = Thực thể
+- <Relationship> = Mối quan hệ
+- {Attribute} = Thuộc tính
+- *PK = Primary Key
+- #FK = Foreign Key
+
+## Sơ đồ:
+
+[TAC_GIA]                    [SACH]                      [NHA_XUAT_BAN]
+{*MaTacGia}                  {*ISBN}                     {*MaNXB}
+{HoTen}          <VIET_SACH> {TenSach}      <XUAT_BAN>   {TenNXB}
+{NamSinh}           M:N      {NamXuatBan}      1:N       {DiaChi}
+{QuocTich}                   {SoLuong}                   {SoDienThoai}
+                             {GiaTien}
+                             {#MaNXB}
+                                 |
+                                 | M:N
+                                 |
+                            <THUOC_THE_LOAI>
+                                 |
+                                 | M:N
+                                 |
+                            [THE_LOAI]
+                            {*MaTheLoai}
+                            {TenTheLoai}
+                            {MoTa}
+
+[THANH_VIEN]                 [SACH]
+{*MaThe}                     {*ISBN}
+{HoTen}          <MUON_TRA>  {TenSach}
+{DiaChi}            M:N      {SoLuong}
+{SoDienThoai}               {NamXuatBan}
+{NgayThamGia}
+{LoaiThanhVien}
+
+## Thuộc tính của các mối quan hệ:
+
+MUON_TRA:
+- NgayMuon
+- NgayHenTra  
+- NgayThucTeTra
+- TrangThai
+
+VIET_SACH:
+- VaiTro
+
+THUOC_THE_LOAI:
+- (Không có thuộc tính riêng)
